@@ -1,5 +1,5 @@
 上上签服务器端说明
-**demo**: [https://taylorchen709.github.io/vue-admin/](https://taylorchen709.github.io/vue-admin/)
+
 
 # To start
 
