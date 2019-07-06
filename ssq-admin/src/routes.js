@@ -2,12 +2,13 @@ import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
-import Table from './views/nav1/Table.vue'
-import Form from './views/nav1/Form.vue'
+import Teacher from './views/nav1/Teacher.vue'
+import Student from './views/nav1/Student.vue'
 import user from './views/nav1/user.vue'
 import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
-import Page6 from './views/nav3/Page6.vue'
+import Page6 from './views/nav2/Page6.vue'
+import Page7 from './views/nav3/Page7.vue'
 import echarts from './views/charts/echarts.vue'
 
 let routes = [
@@ -30,30 +31,30 @@ let routes = [
         name: '用户管理',
         iconCls: 'el-icon-message',//图标样式class
         children: [
-            { path: '/main', component: Main, name: '主页', hidden: true },
-            { path: '/table', component: Table, name: '教师管理' },
-            { path: '/form', component: Form, name: '学生管理' },
+            { path: '/main', component: Main, name: '主页' , hidden: true },
+            { path: '/Teacher', component: Teacher, name: '教师管理'  },
+            { path: '/Student', component: Student, name: '学生管理'  },
             // { path: '/user', component: user, name: '列表' },
         ]
     },
     {
         path: '/',
         component: Home,
-        name: '系统设置',
+        name: '签到查询',
         iconCls: 'fa fa-id-card-o',
         children: [
-            { path: '/page4', component: Page4, name: '时间设置' },
-            { path: '/page5', component: Page5, name: '权限设置' }
+            { path: '/PublishAndSignInSearch', component: Page4, name: '签到发布查询' },
+            { path: '/HistorySignInSearch', component: Page5, name: '历史签到查询' },
+			{ path: '/StudentSignInSearch', component: Page6, name: '学生签到查询' }
         ]
     },
     {
         path: '/',
         component: Home,
-        name: '',
+        name: '课程管理',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: Page6, name: '个人信息' }
+            { path: '/ClassSearch', component: Page7, name: '课程查询' }
         ]
     },
     {
@@ -61,6 +62,7 @@ let routes = [
         component: Home,
         name: 'Charts',
         iconCls: 'fa fa-bar-chart',
+		hidden: true,
         children: [
             { path: '/echarts', component: echarts, name: 'echarts' }
         ]

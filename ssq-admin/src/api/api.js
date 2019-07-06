@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+
+
 let base = '';
 
-export const requestLogin = params => { return axios.post(`${base}/login`, params).then(res => res.data); };
+export const requestLogin = params => { return axios.post(`${base}/login`, params).then(res => res.data); };  //这可能是逻辑值
 
 export const getUserList = params => { return axios.get(`${base}/user/list`, { params: params }); };
 
@@ -15,3 +17,4 @@ export const batchRemoveUser = params => { return axios.get(`${base}/user/batchr
 export const editUser = params => { return axios.get(`${base}/user/edit`, { params: params }); };
 
 export const addUser = params => { return axios.get(`${base}/user/add`, { params: params }); };
+

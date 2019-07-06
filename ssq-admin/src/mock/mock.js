@@ -21,8 +21,8 @@ export default {
     });
 
     //登录
-    mock.onPost('/login').reply(config => {
-      let {username, password} = JSON.parse(config.data);
+    mock.onPost('/login').reply(config => {  //mock提供数据
+      let {username, password} = JSON.parse(config.data);  //这应该是取mock数据
       return new Promise((resolve, reject) => {
         let user = null;
         setTimeout(() => {

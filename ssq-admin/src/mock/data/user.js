@@ -1,4 +1,4 @@
-import Mock from 'mockjs';
+import Mock from 'mockjs';  //导入
 const LoginUsers = [
   {
     id: 1,
@@ -9,9 +9,9 @@ const LoginUsers = [
   }
 ];
 
-const Users = [];
+const Users = [];  //user是一个列表
 
-for (let i = 0; i < 86; i++) {
+for (let i = 0; i < 86; i++) {   //这些是mock随机产生的数据
   Users.push(Mock.mock({
     id: Mock.Random.guid(),
     name: Mock.Random.cname(),
@@ -22,4 +22,4 @@ for (let i = 0; i < 86; i++) {
   }));
 }
 
-export { LoginUsers, Users };
+export { LoginUsers, Users };  //导出

@@ -10,9 +10,20 @@ import Vuex from 'vuex'
 //import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import routes from './routes'
-import Mock from './mock'
-Mock.bootstrap();
+//import Mock from './mock'
+
+
+
+
+//Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
+
+
+import axios from 'axios'
+//把 `axios` 加到 `Vue` 的原型中
+Vue.prototype.$axios = axios;
+axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
